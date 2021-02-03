@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Navigate from './components/Navigate';
+import ForumBody from './components/ForumBody';
+import ForumList from './components/ForumList';
+import ChosenTopic from './components/ChosenTopic';
+import TopicPost from './components/TopicPost';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Navigate />
+      </div>
+      <div className="container-fluid">
+        <Header />
+      </div>
+      <ForumBody />
+      <ForumList />
+      <div>
+        <ChosenTopic />
+      </div>
+      <div>
+        <TopicPost />
+      </div>
     </div>
   );
 }

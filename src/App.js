@@ -1,15 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
-import Navigate from './components/Navigate';
-import ForumBody from './components/ForumBody';
-import ForumList from './components/ForumList';
-import ChosenTopic from './components/ChosenTopic';
-import TopicPost from './components/TopicPost';
-
+import Header from "./components/Header";
+import Navigate from "./components/Navigate";
+import ForumBody from "./components/ForumBody";
+import ForumList from "./components/ForumList";
+import ChosenTopic from "./components/ChosenTopic";
+import TopicPost from "./components/TopicPost";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <Router>
       <div>
         <Navigate />
       </div>
@@ -24,7 +23,7 @@ function App() {
       <div>
         <TopicPost />
       </div>
-    </div>
+    </Router>
   );
 }
 
